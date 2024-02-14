@@ -1,11 +1,17 @@
 {
   "env": {
+    "es2020": true,
     "node": true
   },
   "extends": [
     "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/strict-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:jsx-a11y/strict",
     "prettier"
   ],
   "overrides": [
@@ -13,7 +19,13 @@
       "env": {
         "jest": true
       },
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest-formatting/strict",
+        "plugin:testing-library/react"
+      ],
       "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "plugins": ["jest", "jest-formatting", "testing-library"],
       "rules": {}
     }
   ],
@@ -22,7 +34,15 @@
     "ecmaVersion": "latest",
     "project": "./tsconfig.eslint.json"
   },
-  "plugins": ["@nx", "@typescript-eslint", "perfectionist"],
+  "plugins": [
+    "@nx",
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "import",
+    "perfectionist",
+    "jsx-a11y"
+  ],
   "root": true,
   "rules": {
     "@nx/enforce-module-boundaries": [
@@ -53,10 +73,20 @@
     "@typescript-eslint/no-import-type-side-effects": "error",
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-var-requires": "off",
+    "import/no-cycle": "error",
     "perfectionist/sort-imports": [
       "error",
       {
+        "custom-groups": {
+          "type": {
+            "react": ["react"]
+          },
+          "value": {
+            "react": ["react"]
+          }
+        },
         "groups": [
+          "react",
           "type",
           ["builtin", "external"],
           "internal-type",
@@ -68,7 +98,8 @@
         ],
         "internal-pattern": ["@citrus/**", "@pcty-citrus/**", "@pcty/**"]
       }
-    ]
+    ],
+    "react/react-in-jsx-scope": "off"
   },
   "settings": {
     "react": {
