@@ -1,8 +1,7 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
     "module": "commonjs",
+    "outDir": "../../dist/out-tsc",
     "types": [
       "jest",
       "node",
@@ -10,6 +9,7 @@
       "@nx/react/typings/image.d.ts"
     ]
   },
+  "extends": "./tsconfig.json",
   "include": [
     "jest.config.ts",
     "src/**/*.test.ts",
