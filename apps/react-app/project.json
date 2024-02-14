@@ -1,5 +1,11 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "build": {
+    "executor": "@nx/web:webpack",
+    "options": {
+      "postcssConfig": "apps/react-app/postcss.config.js"
+    }
+  },
   "name": "react-app",
   "projectType": "application",
   "sourceRoot": "apps/react-app/src",

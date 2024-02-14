@@ -1,9 +1,7 @@
-import NxWelcome from "./nx-welcome";
-
 function App() {
   return (
-    <div>
-      <NxWelcome title="citrus-poc-nx" />
+    <div className="bg-black text-white">
+      <h1>Welcome to react-app!</h1>
     </div>
   );
 }
