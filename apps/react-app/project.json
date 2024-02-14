@@ -1,7 +1,7 @@
 {
-  "name": "citrus-poc-nx",
+  "name": "react-app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/citrus-poc-nx/src",
+  "sourceRoot": "apps/react-app/src",
   "projectType": "application",
   "targets": {},
   "tags": []
