@@ -1,0 +1,8 @@
+{
+  "name": "citrus-poc-nx",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/citrus-poc-nx/src",
+  "projectType": "application",
+  "targets": {},
+  "tags": []
+}
