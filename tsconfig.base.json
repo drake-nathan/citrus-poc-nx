@@ -10,6 +10,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "paths": {
+      "@citrus-poc-nx/storybook": ["apps/storybook/src/index.ts"],
       "@citrus-poc/select-static": ["libs/select-static/src/index.ts"]
     },
     "rootDir": ".",
