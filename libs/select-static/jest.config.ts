@@ -1,8 +1,8 @@
 import type { Config } from "jest";
 
 export default {
-  coverageDirectory: "../../coverage/apps/react-app",
-  displayName: "react-app",
+  coverageDirectory: "../../coverage/select-static",
+  displayName: "select-static",
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
   preset: "../../jest.preset.js",
   transform: {

@@ -12,6 +12,8 @@
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:jsx-a11y/strict",
+    "plugin:tailwindcss/recommended",
+    "plugin:perfectionist/recommended-natural",
     "prettier"
   ],
   "overrides": [
@@ -71,9 +73,19 @@
       }
     ],
     "@typescript-eslint/no-import-type-side-effects": "error",
+    "@typescript-eslint/no-unsafe-argument": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
     "@typescript-eslint/no-var-requires": "off",
     "import/no-cycle": "error",
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["@citrus-poc/*"]
+      }
+    ],
     "perfectionist/sort-imports": [
       "error",
       {

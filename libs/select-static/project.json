@@ -1,0 +1,29 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "select-static",
+  "projectType": "library",
+  "sourceRoot": "libs/select-static/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "options": {
+        "assets": [
+          {
+            "glob": "libs/select-static/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "compiler": "babel",
+        "entryFile": "libs/select-static/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "outputPath": "dist/select-static",
+        "project": "libs/select-static/package.json",
+        "rollupConfig": "libs/select-static/rollup.config.js",
+        "tsConfig": "libs/select-static/tsconfig.lib.json"
+      },
+      "outputs": ["{options.outputPath}"]
+    }
+  }
+}
