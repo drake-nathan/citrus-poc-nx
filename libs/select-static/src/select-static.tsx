@@ -17,7 +17,7 @@ export default function SelectStatic({
   placeholder,
   selectRef,
   ...props
-}: SelectStaticProps) {
+}: SelectStaticProps): React.JSX.Element {
   return (
     <select className="citrus-poc-select-static" ref={selectRef} {...props}>
       <option disabled hidden value="">

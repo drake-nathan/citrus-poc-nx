@@ -12,12 +12,14 @@
   },
   "private": true,
   "dependencies": {
+    "@citrus/input-select": "^10.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tslib": "^2.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
     "@nx/eslint": "18.0.4",
     "@nx/eslint-plugin": "18.0.4",
@@ -31,6 +33,7 @@
     "@nx/workspace": "18.0.4",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@rollup/plugin-url": "^8.0.2",
+    "@storybook/addon-a11y": "^7.6.16",
     "@storybook/addon-essentials": "7.6.16",
     "@storybook/addon-interactions": "^7.6.16",
     "@storybook/core-server": "7.6.16",
