@@ -108,9 +108,15 @@
           "object",
           "unknown"
         ],
-        "internal-pattern": ["@citrus/**", "@pcty-citrus/**", "@pcty/**"]
+        "internal-pattern": [
+          "@citrus/**",
+          "@pcty-citrus/**",
+          "@pcty/**",
+          "@citrus-poc-nx"
+        ]
       }
     ],
+    "react/prop-types": "off",
     "react/react-in-jsx-scope": "off"
   },
   "settings": {

@@ -1,26 +1,20 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { type IOption, SelectStatic } from "@citrus/input-select";
-import { Citron } from "@citrus/user";
+import { type Option, SelectBasic } from "@citrus-poc/select-shadcn";
 
 const meta = {
-  component: SelectStatic,
+  component: SelectBasic,
   parameters: {
     layout: "centered",
   },
-  render: (args) => (
-    <Citron>
-      <SelectStatic {...args} />
-    </Citron>
-  ),
   tags: ["autodocs"],
-  title: "Citrus Select Static",
-} satisfies Meta<typeof SelectStatic>;
+  title: "Shadcn Select",
+} satisfies Meta<typeof SelectBasic>;
 
 export default meta;
-type Story = StoryObj<typeof SelectStatic>;
+type Story = StoryObj<typeof SelectBasic>;
 
-const options: IOption<string>[] = [
+const options: Option[] = [
   { label: "Apple", value: "apple" },
   { label: "Banana", value: "banana" },
   { label: "Orange", value: "orange" },
@@ -30,7 +24,6 @@ const options: IOption<string>[] = [
 
 export const Basic = {
   args: {
-    id: "citrus-select-static-story",
     label: "Select a Fruit",
     options,
     placeholder: "Select a Fruit",

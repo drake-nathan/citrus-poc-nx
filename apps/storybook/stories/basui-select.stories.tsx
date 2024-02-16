@@ -1,26 +1,20 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { type IOption, Select } from "@citrus/input-select";
-import { Citron } from "@citrus/user";
+import { type Option, SelectBaseUi } from "@citrus-poc/select-baseui";
 
 const meta = {
-  component: Select,
+  component: SelectBaseUi,
   parameters: {
     layout: "centered",
   },
-  render: (args) => (
-    <Citron>
-      <Select {...args} />
-    </Citron>
-  ),
   tags: ["autodocs"],
-  title: "Citrus Select",
-} satisfies Meta<typeof Select>;
+  title: "Base UI Select",
+} satisfies Meta<typeof SelectBaseUi>;
 
 export default meta;
-type Story = StoryObj<typeof Select>;
+type Story = StoryObj<typeof SelectBaseUi>;
 
-const options: IOption<string>[] = [
+const options: Option[] = [
   { label: "Apple", value: "apple" },
   { label: "Banana", value: "banana" },
   { label: "Orange", value: "orange" },
@@ -30,9 +24,6 @@ const options: IOption<string>[] = [
 
 export const Basic = {
   args: {
-    id: "citrus-select-static-story",
-    label: "Select a Fruit",
     options,
-    placeholder: "Select a Fruit",
   },
 } satisfies Story;

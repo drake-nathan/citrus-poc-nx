@@ -11,6 +11,9 @@
     "moduleResolution": "node",
     "paths": {
       "@citrus-poc-nx/storybook": ["apps/storybook/src/index.ts"],
+      "@citrus-poc-nx/tools": ["libs/tools/src/index.ts"],
+      "@citrus-poc/select-baseui": ["libs/select-baseui/src/index.ts"],
+      "@citrus-poc/select-shadcn": ["libs/select-shadcn/src/index.ts"],
       "@citrus-poc/select-static": ["libs/select-static/src/index.ts"]
     },
     "rootDir": ".",

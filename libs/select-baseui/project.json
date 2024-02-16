@@ -1,0 +1,29 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "select-baseui",
+  "projectType": "library",
+  "sourceRoot": "libs/select-baseui/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "options": {
+        "assets": [
+          {
+            "glob": "libs/select-baseui/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "compiler": "babel",
+        "entryFile": "libs/select-baseui/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "outputPath": "dist/select-baseui",
+        "project": "libs/select-baseui/package.json",
+        "rollupConfig": "libs/select-baseui/rollup.config.js",
+        "tsConfig": "libs/select-baseui/tsconfig.lib.json"
+      },
+      "outputs": ["{options.outputPath}"]
+    }
+  }
+}

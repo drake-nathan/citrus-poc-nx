@@ -1,0 +1,11 @@
+{
+  "name": "@citrus-poc/select-shadcn",
+  "version": "0.0.1",
+  "dependencies": {
+    "@radix-ui/react-select": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@radix-ui/react-select": "^2.0.0",
+    "react": "^18.2.0"
+  }
+}

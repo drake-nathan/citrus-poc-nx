@@ -1,0 +1,29 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "select-shadcn",
+  "projectType": "library",
+  "sourceRoot": "libs/select-shadcn/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "options": {
+        "assets": [
+          {
+            "glob": "libs/select-shadcn/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "compiler": "babel",
+        "entryFile": "libs/select-shadcn/src/index.ts",
+        "external": ["react", "react-dom", "react/jsx-runtime"],
+        "outputPath": "dist/select-shadcn",
+        "project": "libs/select-shadcn/package.json",
+        "rollupConfig": "libs/select-shadcn/rollup.config.js",
+        "tsConfig": "libs/select-shadcn/tsconfig.lib.json"
+      },
+      "outputs": ["{options.outputPath}"]
+    }
+  }
+}

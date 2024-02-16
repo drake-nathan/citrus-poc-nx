@@ -1,20 +1,25 @@
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { SelectStatic } from "../../../../dist/select-static";
+import {
+  SelectContent,
+  SelectItem,
+  SelectRoot,
+  SelectTrigger,
+  SelectValue,
+} from "@citrus-poc/select-shadcn";
 
 function App() {
   return (
     <div className="flex h-svh flex-col items-center gap-4 p-4">
-      <h1>Welcome to react-app!</h1>
+      <SelectRoot>
+        <SelectTrigger className="w-[280px]">
+          <SelectValue placeholder="Theme" />
+        </SelectTrigger>
 
-      <SelectStatic
-        options={[
-          { label: "Apple", value: "apple" },
-          { label: "Banana", value: "banana" },
-          { label: "Orange", value: "orange" },
-          { label: "Watermelon", value: "watermelon" },
-        ]}
-        placeholder="Select a fruit"
-      />
+        <SelectContent>
+          <SelectItem value="light">Light</SelectItem>
+          <SelectItem value="dark">Dark</SelectItem>
+          <SelectItem value="system">System</SelectItem>
+        </SelectContent>
+      </SelectRoot>
     </div>
   );
 }
