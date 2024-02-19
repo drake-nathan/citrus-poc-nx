@@ -122,6 +122,9 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "tailwindcss": {
+      "config": "./apps/react-app/tailwind.config.js"
     }
   }
 }

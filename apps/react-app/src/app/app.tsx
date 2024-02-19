@@ -8,7 +8,7 @@ import {
 
 function App() {
   return (
-    <div className="flex h-svh flex-col items-center gap-4 p-4">
+    <div className="flex h-svh flex-col items-center gap-4 bg-select-background-color p-4">
       <SelectRoot>
         <SelectTrigger className="w-[280px]">
           <SelectValue placeholder="Theme" />

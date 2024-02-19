@@ -24,6 +24,7 @@ const options: Option[] = [
 
 export const Basic = {
   args: {
+    footnote: "Footnote",
     label: "Select a Fruit",
     options,
     placeholder: "Select a Fruit",

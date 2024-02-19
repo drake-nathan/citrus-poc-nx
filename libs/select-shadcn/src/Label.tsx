@@ -7,7 +7,10 @@ const Label = forwardRef<
   React.LabelHTMLAttributes<HTMLLabelElement>
 >(({ children, className, ...props }, ref) => (
   <label
-    className={cn("text-label-textColor p-1 text-sm font-semibold", className)}
+    className={cn(
+      "px-3 py-1 text-sm font-semibold text-label-text-color",
+      className,
+    )}
     ref={ref}
     {...props}
   >

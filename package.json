@@ -8,7 +8,7 @@
     "lint:fix": "eslint --fix",
     "prettier": "prettier --write",
     "start": "nx serve react-app",
-    "story": "nx run storybook:storybook"
+    "story": "nx run storybook:storybook -p 6006"
   },
   "private": true,
   "dependencies": {

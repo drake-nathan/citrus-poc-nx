@@ -7,7 +7,7 @@ const Footnote = forwardRef<
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ children, className, ...props }, ref) => (
   <p
-    className={cn("text-footnote-textColor p-1 text-xs", className)}
+    className={cn("px-3 py-1 text-xs text-footnote-text-color", className)}
     ref={ref}
     {...props}
   >

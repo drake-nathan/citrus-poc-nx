@@ -2,5 +2,6 @@
   "experimentalTernaries": true,
   "jsonRecursiveSort": true,
   "plugins": ["prettier-plugin-sort-json", "prettier-plugin-tailwindcss"],
+  "tailwindConfig": "./apps/react-app/tailwind.config.js",
   "tailwindFunctions": ["cva", "cn"]
 }
