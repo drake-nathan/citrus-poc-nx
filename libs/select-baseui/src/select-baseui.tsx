@@ -20,7 +20,11 @@ export default function SelectBaseUi({
       aria-label="Fruit"
       defaultValue={defaultValue ?? options[0].value}
       {...props}
-      slots={{ listbox: St.ListBox }}
+      slots={{
+        listbox: St.ListBox,
+        popup: St.Popup,
+        root: St.Trigger,
+      }}
     >
       {options.map((option, i) => (
         <St.Item key={`${option.value}-${i}`} value={option.value}>
