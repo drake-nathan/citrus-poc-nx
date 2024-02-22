@@ -7,14 +7,8 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  render: (args) => (
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.25em" }}>
-      <label htmlFor="select-static-story">Select a Fruit</label>
-      <SelectStatic id="select-static-story" {...args} />
-    </div>
-  ),
   tags: ["autodocs"],
-  title: "Select Static",
+  title: "Native Select",
 } satisfies Meta<typeof SelectStatic>;
 
 export default meta;
